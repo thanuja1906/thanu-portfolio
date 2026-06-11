@@ -250,7 +250,7 @@ const Summary = () => {
       ref={sectionRef}
       className="relative w-full h-screen flex items-center py-24 px-8 md:px-12 lg:px-16 overflow-hidden bg-transparent z-20"
     >
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 w-full max-w-[1600px] mx-auto z-10">
+      <div className="flex items-center justify-center w-full max-w-[1600px] mx-auto z-10">
         <div ref={textBlockRef} className="flex-1 w-full flex flex-col gap-6 will-change-transform">
           <SectionLabel text="Profile" />
           <h2 className="font-heading text-[10vw] lg:text-[6vw] font-bold leading-[0.85] tracking-[-0.03em] text-white uppercase">
@@ -262,22 +262,11 @@ const Summary = () => {
             passionate about building efficient, user-friendly web applications and intelligent systems.
           </p>
           <div className="flex flex-wrap gap-3 mt-2">
-            {['Python', 'C/C++', 'JavaScript', 'Flask', 'React', 'SQL', 'DSA', 'Machine Learning'].map((skill) => (
+            {['Python', 'C/C++', 'JavaScript', 'Flask', 'SQL', 'DSA', 'Machine Learning'].map((skill) => (
               <span key={skill} className="px-4 py-1.5 border border-white/10 rounded-full bg-white/5 backdrop-blur-md text-xs font-semibold text-gray-300 tracking-widest uppercase">
                 {skill}
               </span>
             ))}
-          </div>
-        </div>
-
-        <div ref={imageRef} className="flex justify-center items-center w-full lg:w-[35%] max-w-[420px] will-change-transform">
-          <div className="relative w-full aspect-[4/5] rounded-[40px] border border-white/10 bg-white/[0.02] backdrop-blur-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] flex items-center justify-center">
-            {/* Replaced the text block with the avatar image */}
-            <img 
-              src="/avatar2.jpg" 
-              alt="Apuri Thanuja" 
-              className="w-full h-full object-cover"
-            />
           </div>
         </div>
       </div>
@@ -345,7 +334,7 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 w-full items-start">
           <div className="flex flex-col gap-6 w-full">
-            <TabbedCard title="LANGUAGES" content="C, C++, Python, JavaScript" isAccent={true} />
+            <TabbedCard title="LANGUAGES" content="C, C++, Python" isAccent={true} />
             <TabbedCard title="DATABASES" content="SQL, MySQL" />
           </div>
           <div className="flex flex-col gap-6 w-full md:mt-12">
@@ -620,7 +609,7 @@ const Education = () => {
 
   const educationHistory = [
     { id: 1, institution: 'Krishnaveni Junior College', location: 'Telangana', degree: 'Intermediate', date: '2021 – 2023', gradeType: 'CGPA', grade: '9.49 / 10' },
-    { id: 2, institution: 'BV Raju Institute Of Technology', location: 'Narsapur', degree: 'B.Tech – Information Technology', date: 'Aug 2023 – Apr 2027', gradeType: 'CGPA', grade: '8.91 / 10' },
+    { id: 2, institution: 'BV Raju Institute Of Technology', location: 'Narsapur', degree: 'B.Tech – Information Technology', date: 'Aug 2023 – Apr 2027', gradeType: 'CGPA', grade: '8.92 / 10' },
   ];
 
   useEffect(() => {
